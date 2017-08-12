@@ -1,0 +1,33 @@
+{
+  "name": "url-shortener-microservice",
+  "version": "1.0.0",
+  "description": "git remote add origin git@github.com:kpicaza/url-shortener-microservice.git",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kpicaza/url-shortener-microservice.git"
+  },
+  "author": "kpicaza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kpicaza/timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/kpicaza/timestamp-microservice#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongo": "^0.1.0",
+    "mongodb": "^2.2.31",
+    "node-env-file": "^0.1.8",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.3",
+    "rsvp": "^4.0.1",
+    "shortid": "^2.2.8",
+    "url-exists": "^1.0.3",
+    "valid-url": "^1.0.9"
+  }
+}
