@@ -1,0 +1,51 @@
+head
+    title URL shortener Microservice
+
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700")
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons")
+
+    link(rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css")
+
+div(class="jumbotron text-white bg-danger")
+    div(class="container")
+        h1 URL shortener Microservice
+
+div(class="container")
+    div(class="card")
+        div(class="card-block")
+            h2(class="card-title") User stories:
+            hr
+
+            p(class="lead") #[strong User Story 1:] I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+                |
+            p(class="lead") #[strong User Story 2:] If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+                |
+            p(class="lead") #[strong User Story 3:] When I visit that shortened URL, it will redirect me to my original link.
+
+        div(class="card-block")
+            h3(class="card-title") Usage
+            hr
+            div(class="card-block")
+                h4(class="card-title") Create short url:
+                div(class="card bg-inverse")
+                    div(class="card-block")
+                        pre
+                            code(class="text-white")= 'curl -X POST \\\n'  + siteUrl + 'api/short-urls \\\n'+ '  -H \'cache-control: no-cache\' \\\n'+ '  -H \'content-type: application/x-www-form-urlencoded\' \\\n'+ '  -d url=https%3A%2F%2Fgoogle.com'
+
+
+            div(class="card-block")
+                h4(class="card-title") Response
+                div(class="card bg-inverse")
+                    div(class="card-block")
+                        pre
+                            code(class="text-white")='{ "original_url": "https://google.com", "short_url": "'  + siteUrl + 'p/rJVV7unPb" }'
+
+            div(class="card-block")
+                h4(class="card-title") Error Responses
+                div(class="card bg-inverse")
+                    div(class="card-block")
+                        pre
+                            code(class="text-white")='{"error":"Given url does not exist."}'
+                            br
+                            code(class="text-white")= '{"error":"Invalid url format given."}'
+            hr
