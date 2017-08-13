@@ -14,9 +14,9 @@
   "author": "kpicaza",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kpicaza/timestamp-microservice/issues"
+    "url": "https://github.com/kpicaza/url-shortener-microservice/issues"
   },
-  "homepage": "https://github.com/kpicaza/timestamp-microservice#readme",
+  "homepage": "https://github.com/kpicaza/url-shortener-microservice#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
